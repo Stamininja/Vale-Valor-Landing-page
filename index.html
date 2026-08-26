@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vale Valor — Your AI Companion for Wellbeing & Life</title>
-  
-  <!-- Fonts: Inter & JetBrains Mono -->
+
+  <!-- CUSTOM VALE VALOR CIRCULAR LOGO FAVICON FOR TAB -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23121212' stroke='%23222' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='40' fill='%2307130c'/%3E%3Ctext x='50' y='52' font-family='Georgia, serif' font-size='38' fill='%23ffffff' text-anchor='middle' font-weight='normal'%3EV%3C/text%3E%3Ctext x='50' y='70' font-family='Brush Script MT, cursive' font-size='16' fill='%23ffffff' text-anchor='middle'%3EVale Valor%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts: Inter, Playfair Display for logo, & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
   
   <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
@@ -279,19 +282,18 @@
     }
 
     .brand-logo {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-md);
-      background: var(--app-green-btn);
-      border: 1px solid var(--accent-green);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 15px var(--accent-glow);
+      box-shadow: 0 0 15px rgba(76, 78, 25, 0.4);
     }
 
     .brand-logo svg {
-      color: var(--accent-green);
+      width: 44px;
+      height: 44px;
     }
 
     .brand-title {
@@ -358,7 +360,7 @@
     }
 
     /* -------------------------------------------------------------------------- */
-    /* APP SCREENSHOT/UI REPLICAS (PURE CSS)                                      */
+    /* APP SCREENSHOT/UI REPLICAS                                                 */
     /* -------------------------------------------------------------------------- */
     .app-preview-window {
       width: 100%;
@@ -419,7 +421,6 @@
       min-height: 440px;
     }
 
-    /* Sidebar replica from screenshots */
     .app-sidebar {
       background: var(--bg-sidebar);
       border-right: 1px solid rgba(255,255,255,0.05);
@@ -505,7 +506,6 @@
       font-weight: 600;
     }
 
-    /* Screen Main Area Replica - Fixed Padding & Sizing */
     .app-main-content {
       padding: 16px;
       display: flex;
@@ -603,7 +603,6 @@
       overflow: hidden;
     }
 
-    /* Routine Tracker Preview */
     .routine-preview-box {
       background: rgba(16, 40, 26, 0.5);
       border: 1px solid var(--app-green-border);
@@ -635,7 +634,6 @@
       display: inline-block;
     }
 
-    /* Exercise Tracker Preview */
     .exercise-row {
       display: flex;
       align-items: center;
@@ -660,7 +658,6 @@
       border-radius: 3px;
     }
 
-    /* Planner TreeMap Preview */
     .treemap-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -686,7 +683,6 @@
       overflow: hidden;
     }
 
-    /* Meditation Timer Preview */
     .meditation-circle {
       width: 80px;
       height: 80px;
@@ -888,7 +884,6 @@
       gap: 20px;
     }
 
-    /* Media Queries */
     @media (max-width: 992px) {
       .hero {
         grid-template-columns: 1fr;
@@ -942,8 +937,18 @@
   <header id="header">
     <div class="nav-container">
       <a href="#" class="brand">
+        <!-- REPLACED WITH CIRCULAR VALE VALOR LOGO SVG -->
         <div class="brand-logo">
-          <i data-feather="feather"></i>
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Dark Outer Circle Rim -->
+            <circle cx="50" cy="50" r="47" fill="#121212" stroke="#1c1c1c" stroke-width="4"/>
+            <!-- Inner Olive Green Circle -->
+            <circle cx="50" cy="50" r="41" fill="#07130c"/>
+            <!-- Large Serif V -->
+            <text x="50" y="52" font-family="'Playfair Display', Georgia, serif" font-size="39" fill="#ffffff" text-anchor="middle" font-weight="500">V</text>
+            <!-- Script Text Vale Valor -->
+            <text x="50" y="71" font-family="'Caveat', 'Brush Script MT', cursive" font-size="16" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">Vale Valor</text>
+          </svg>
         </div>
         <div class="brand-title">Vale <span>Valor</span></div>
       </a>
@@ -1081,7 +1086,7 @@
       </div>
     </section>
 
-    <!-- FEATURES SECTION WITH INLINE VISUAL SCREENSHOT REPLICAS -->
+    <!-- FEATURES SECTION -->
     <section id="features">
       <div class="text-center reveal">
         <div class="section-tag">Core Capabilities</div>
@@ -1090,7 +1095,7 @@
       </div>
 
       <div class="features-grid">
-        <!-- AI Conversation (Featured) -->
+        <!-- AI Conversation -->
         <div class="glass-card feature-card featured reveal">
           <div class="feature-ui-preview" style="justify-content: flex-end;">
             <div class="chat-bubble-app vale" style="margin-bottom: 6px; font-size: 0.75rem;">
@@ -1280,12 +1285,12 @@
       <div class="glass-card creators-card reveal">
         <div>
           <div class="section-tag" style="margin-bottom: 8px;">Innovation Project</div>
-          <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">Aiden & Labeebsha</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">Labeeb & Aid</div>
           <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-green); margin-top: 4px;">High-School Student Creators</div>
         </div>
         <div>
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
-            Vale Valor was born as a student innovation initiative. Founded on the original vision by <strong>Labeebha</strong>, and <strong>Aiden</strong> brought to life in the world of codes, Vale was designed to bridge the gap between transactional AI utilities and warm, human-centric wellbeing tools for students and everyday users alike.
+            Vale Valor was born as a student innovation initiative. Founded on the original vision by <strong>Labeeb</strong> and brought to life in collaboration with <strong>Aid</strong>, Vale was designed to bridge the gap between transactional AI utilities and warm, human-centric wellbeing tools for students and everyday users alike.
           </p>
         </div>
       </div>
@@ -1306,8 +1311,15 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-container">
-      <div style="font-size: 0.88rem; color: var(--text-muted);">
-        <strong>Vale Valor</strong> — Created by Aiden & Labeebsha
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text-muted);">
+        <!-- FOOTER LOGO -->
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;">
+          <circle cx="50" cy="50" r="47" fill="#121212" stroke="#1c1c1c" stroke-width="4"/>
+          <circle cx="50" cy="50" r="41" fill="#07130c"/>
+          <text x="50" y="52" font-family="'Playfair Display', Georgia, serif" font-size="39" fill="#ffffff" text-anchor="middle" font-weight="500">V</text>
+          <text x="50" y="71" font-family="'Caveat', 'Brush Script MT', cursive" font-size="16" fill="#ffffff" text-anchor="middle">Vale Valor</text>
+        </svg>
+        <strong>Vale Valor</strong> — Created by Labeeb & Aid
       </div>
 
       <ul style="display: flex; gap: 24px; list-style: none;">
